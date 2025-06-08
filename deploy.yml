@@ -1,0 +1,10 @@
+ - name: Deploy Maven Artifact
+   hosts: localhost
+   become: no
+   tasks:
+     - name: Create directory is it is not there
+       ansible.builtin.file:
+         path: /opt/deployment
+         state: directory
+         mode: '0755'  
+
